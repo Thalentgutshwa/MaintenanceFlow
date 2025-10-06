@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MaintenanceFlow - Kanban CMMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MaintenanceFlow</h1>
+    <nav>
+      <button id="kanbanBtn">Kanban</button>
+      <button id="analyticsBtn">Analytics</button>
+      <button id="newOrderBtn">+ New Request</button>
+    </nav>
+  </header>
+  <main>
+    <section id="kanbanSection"></section>
+    <section id="analyticsSection" style="display:none"></section>
+  </main>
+
+  <!-- Modals -->
+  <div id="modalBackdrop" class="modal-backdrop" style="display:none"></div>
+  <div id="modalContainer" class="modal-container" style="display:none"></div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
