@@ -1,0 +1,126 @@
+body, html {
+  margin: 0; padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f8fa;
+  min-height: 100vh;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+header nav button {
+  margin-left: 0.5rem;
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+main {
+  padding: 1rem;
+}
+#kanbanSection {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.kanban-col {
+  background: #fff;
+  border-radius: 6px;
+  flex: 1 1 180px;
+  min-width: 180px;
+  min-height: 420px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+.kanban-col h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #444;
+}
+.card {
+  background: #f3f5fa;
+  margin-bottom: 0.7rem;
+  border-radius: 4px;
+  padding: 0.6em 0.5em;
+  box-shadow: 0 1px 4px #8882;
+  cursor: grab;
+  user-select: none;
+  transition: box-shadow 0.2s;
+}
+.card:hover { box-shadow: 0 4px 12px #8882; }
+.priority {
+  font-size: 0.9em;
+  border-radius: 2px;
+  padding: 2px 8px;
+  margin-left: 3px;
+}
+.priority.high { background: #f08080; color: #fff; }
+.priority.medium { background: #ffd966; color: #444; }
+.priority.low { background: #b6e388; color: #333; }
+
+.modal-backdrop {
+  position: fixed; top:0; left:0; width:100vw; height:100vh;
+  background: #0005; z-index: 999;
+}
+.modal-container {
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff; padding: 1.5em;
+  border-radius: 10px; min-width: 300px; max-width: 90vw;
+  box-shadow: 0 2px 18px #0003;
+  z-index: 1000;
+}
+.close-btn {
+  position: absolute; right: 1em; top: 1em;
+  background: none; border: none; font-size: 1.5em; cursor: pointer;
+}
+form label { display: block; margin: 0.7em 0 0.2em; }
+form input, form select, form textarea {
+  width: 100%; padding: 0.4em;
+  border: 1px solid #ccc;
+  border-radius: 3px; box-sizing: border-box;
+}
+form button[type="submit"] {
+  margin-top: 1em;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-actions button {
+  margin-right: 0.5em;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#analyticsSection {
+  background: #fff;
+  border-radius: 7px;
+  padding: 1.2em;
+  box-shadow: 0 2px 8px #0001;
+  max-width: 900px; margin: 2em auto;
+}
+.charts-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.chart-box {
+  flex: 1 1 320px;
+  min-width: 220px;
+}
+@media (max-width: 800px) {
+  #kanbanSection { flex-direction: column; }
+  .charts-row { flex-direction: column; }
+}
